@@ -96,7 +96,7 @@ p {
 }
 
 /* status */
-.hover {
+.is-hover {
 	background-color: gray!important;
 }
 

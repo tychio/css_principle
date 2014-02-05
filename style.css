@@ -1,4 +1,4 @@
-/* reset */
+/* base */
 html, body {
 	height: 100%;
 	margin: 0;
@@ -9,63 +9,42 @@ p {
 }
 
 /* layout */
-.header {
+#header {
 	z-index: 70000;
 	height: 60px;
 }
 
-.main {
+#main {
 	z-index: 10000;
 	height: auto;
 	min-height: 100%;
 	margin-top: -60px;
 	margin-bottom: -180px;
-	background-color: #F4F4F4;
 }
 
-.footer {
+#footer {
 	z-index: 40000;
 	height: 180px;
-	background-color: #F3E9E4;
 	text-align: center;
 }
 
-.container {
+.l-container {
 	display: block;
 	position: relative;
 	overflow: hidden;
 	width: 100%;
 }
 
-/* =wrap */
-.wrapper {
+.l-wrapper {
 	padding-top: 60px;
 	padding-bottom: 180px;
 }
 
-/* ==section */
-.section {
-	display: block;
-	position: relative;
-	z-index: 11000;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.divide {
-	border-top: 1px solid #CCACAC;
-}
-
-.viewport {
-	width: 900px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-}
-
+/* module */
+/* =hero  */
 .hero {
+	position: relative;
+	z-index: 15000;
 	height: 300px;
 	background-image: url('');
 	background-repeat: no-repeat;
@@ -76,30 +55,70 @@ p {
 	        background-size: cover;
 }
 
-.title {
+.hero-title {
 	position: absolute;
-	z-index: 11100;
+	z-index: 15100;
 	top: 50%;
 	left: 50%;
-	width: 300px;
+	width: 420px;
 	height: 150px;
-	line-height: 150px;
-	margin: -75px 0 0 -120px;
+	line-height: 75px;
+	margin: -75px 0 0 -210px;
 	text-align: center;
 	font-size: 28px;
-	color: white;
 }
 
-.mash {
-	background-color: rgba(20,20,20,0.6);
+/* =section */
+.section {
+	display: block;
+	position: relative;
+	z-index: 11000;
+	width: 900px;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
 
-.line {
+.section:last-child {
+	border-bottom: none;
+}
+
+.section-title {
+	line-height: 40px;
+	font-size: 24px;
+}
+
+.section-content p {
 	line-height: 30px;
 	font-size: 18px;
 }
 
-.subtitle {
-	line-height: 40px;
-	font-size: 24px;
+/* status */
+.hover {
+	background-color: gray!important;
+}
+
+/* theme */
+#header {
+	background-color: rgba(20,20,20,0.6);
+}
+
+#main {
+	background-color: #F4F4F4;
+}
+
+#footer {
+	background-color: #F3E9E4;
+}
+
+.hero-title {
+	color: white;
+	background-color: rgba(20,20,20,0.6);
+}
+
+.section {
+	background-color: white;
+	border-bottom-color: #CCACAC;
 }

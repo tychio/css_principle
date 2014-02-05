@@ -6,39 +6,52 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header class="header mash container"></header>
-	<main class="main container">
-		<div class="wrapper">
+	<header id="header" class="l-container"></header>
+	<main id="main" class="l-container">
+		<div class="l-wrapper">
+			<section class="hero" id="hero">
+				<header class="hero-title">Scalable and Modular Architecture for CSS (SMACSS)</header>
+				<div class="hero-content"></div>
+			</section>
 			<section class="section">
-				<header class="title mash">Object-Oriented CSS</header>
-				<div class="content hero"></div>
-			</section>
-			<section class="section viewport">
-				<header class="subtitle">OOCSS goals and visual design patterns</header>
-				<div class="content">
-					<p class="line">It isn’t object oriented in the same way programming languages are.</p>
-					<p class="line">The objects are visual design patterns.</p>
-					<p class="line">It encourage code reuse for faster, more efficient and easier to maintain stylesheets.</p>
-					<p class="line">It avoids IDs and especially descendant selectors.</p>
+				<header class="section-title">What is SMACSS?</header>
+				<div class="section-content">
+					<p>It is a way to examine your design process.</p>
+					<p>It is an attempt to document a consistent approach to site development when using CSS.</p>
 				</div>
 			</section>
-			<section class="section viewport divide">
-				<header class="subtitle">Separation of Structure and Skin</header>
-				<div class="content">
-					<p class="line">Abstracting visual patterns and coding each as a separate class.</p>
-					<p class="line">Skins are abstracted into class-based modules and become reusable.</p>
-					<p class="line">They can be applied to any element and have the same basic result.</p>
+			<section class="section">
+				<header class="section-title">SMACSS has two core goals</header>
+				<div class="section-content">
+					<p>To increase the semantic value of a section of HTML and content.</p>
+					<p>To decrease the expectation of a specific HTML structure.</p>
 				</div>
 			</section>
-			<section class="section viewport divide">
-				<header class="subtitle">Separation of Containers and Content</header>
-				<div class="content">
-					<p class="line">Styles are not dependent on any containing element.</p>
-					<p class="line">To abstract the structural styles into their own reusable class</p>
+			<section class="section">
+				<header class="section-title">Base, Layout, Module, State and Theme</header>
+				<div class="section-content">
+					<p>Base rules wouldn’t be applied to classes or IDs as they’re default CSS rules.</p>
+					<p>Layout rules are for the major components of a site.</p>
+					<p>Minor layout components are considered as modules and typically live inside the major layout components.</p>
+					<p>State rules apply to changes.</p>
+					<p>Theme rules are typically used least on a single project and aren’t considered one of the core categories.</p>
 				</div>
 			</section>
 		</div>
 	</main>
-	<footer class="footer container"></footer>
+	<footer id="footer" class="l-container"></footer>
+	<script type="text/javascript">
+		var hero = document.getElementById('hero');
+		var HOVER_CLASS = 'hover';
+		function enter () {
+			this.classList.add(HOVER_CLASS);
+		}
+		function leave () {
+			this.classList.remove(HOVER_CLASS);
+		}
+
+		hero.addEventListener('mouseenter', enter, false);
+		hero.addEventListener('mouseleave', leave, false);
+	</script>
 </body>
 </html>

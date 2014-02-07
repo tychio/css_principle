@@ -2,43 +2,44 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
-	<title>Example - OOCSS</title>
+	<title>Example - DRY CSS</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header class="header mash container"></header>
-	<main class="main container">
+	<header class="header"></header>
+	<main class="main">
 		<div class="wrapper">
 			<section class="section">
-				<header class="title mash">Object-Oriented CSS</header>
-				<div class="content hero"></div>
+				<header>Don’t Repeat Your CSS</header>
+				<div class="hero"></div>
 			</section>
-			<section class="section viewport">
-				<header class="subtitle">OOCSS goals and visual design patterns</header>
+			<section class="section-center">
+				<header>The 2 principles for writing good css</header>
 				<div class="content">
-					<p class="line">It isn’t object oriented in the same way programming languages are.</p>
-					<p class="line">The objects are visual design patterns.</p>
-					<p class="line">It encourage code reuse for faster, more efficient and easier to maintain stylesheets.</p>
-					<p class="line">It avoids IDs and especially descendant selectors.</p>
+					<p>Keep style separate from content.</p>
+					<p>Avoid specificity by harnessing the cascade.</p>
 				</div>
 			</section>
-			<section class="section viewport divide">
-				<header class="subtitle">Separation of Structure and Skin</header>
+			<section class="section-center">
+				<header>DRY CSS comes down to 3 things</header>
 				<div class="content">
-					<p class="line">Abstracting visual patterns and coding each as a separate class.</p>
-					<p class="line">Skins are abstracted into class-based modules and become reusable.</p>
-					<p class="line">They can be applied to any element and have the same basic result.</p>
+					<p>Group reusable css properties together.</p>
+					<p>Name these groups logically.</p>
+					<p>Add your selectors to the various css groups.</p>
 				</div>
 			</section>
-			<section class="section viewport divide">
-				<header class="subtitle">Separation of Containers and Content</header>
+			<section class="section-center">
+				<header>Additional Thoughts</header>
 				<div class="content">
-					<p class="line">Styles are not dependent on any containing element.</p>
-					<p class="line">To abstract the structural styles into their own reusable class</p>
+					<p>It encourages you to think in terms of style patterns (groups) rather than individual objects.</p>
+					<p>The naming of groups encourages rational organization of design.</p>
+					<p>It encourages optimization and generalization of selectors.</p>
+					<p>It doesn’t require changes to html.</p>
+					<p>There shouldn’t be any performance issues.</p>
 				</div>
 			</section>
 		</div>
 	</main>
-	<footer class="footer container"></footer>
+	<footer class="footer"></footer>
 </body>
 </html>

@@ -2,10 +2,18 @@
 html, body {
 	height: 100%;
 	margin: 0;
+	font-size: 14px;
 }
 
-p {
+/* =reset */
+h1, h2, h3, h4, h5, h6,
+p, ul, li, pre{
+	padding: 0;
 	margin: 0;
+}
+
+ul, li {
+	list-style: none;
 }
 
 /* module */
@@ -48,7 +56,6 @@ p {
 .page-footer,
 .page-container {
 	display: block;
-	overflow: hidden;
 	position: relative;
 }
 
@@ -62,6 +69,7 @@ p {
 /* =hero */
 .hero {
 	height: 300px;
+	opacity: 0.2;
 	background-image: url('');
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -76,12 +84,12 @@ p {
 	z-index: 11100;
 	top: 50%;
 	left: 50%;
-	width: 320px;
-	height: 150px;
-	line-height: 150px;
-	margin: -75px 0 0 -160px;
+	width: 500px;
+	height: 200px;
+	line-height: 200px;
+	margin: -100px 0 0 -250px;
 	text-align: center;
-	font-size: 28px;
+	font-size: 4rem;
 	color: white;
 }
 
@@ -95,13 +103,32 @@ p {
 }
 
 .content-title {
-	line-height: 40px;
-	font-size: 24px;
+	margin-bottom: 1rem;
+	line-height: 2.5rem;
+	font-size: 2rem;
 }
 
-.content-paragraph {
-	line-height: 30px;
-	font-size: 18px;
+.content-list {
+	margin: 0 1rem;
+}
+
+.item {
+	padding-bottom: 1rem;
+}
+
+.item-title {
+	line-height: 2rem;
+	font-size: 1.5rem;
+}
+
+.item-subtitle {
+	line-height: 1.2rem;
+	font-size: 1rem;
+}
+
+.item-paragraph {
+	line-height: 1.5rem;
+	font-size: 1.2rem;
 }
 
 /* state */

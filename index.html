@@ -16,14 +16,47 @@
 				</section>
 				<section class="section content">
 					<header class="content-title">CSS Guide</header>
-					<div class="content-paragraph">
-						<p>Abstract structure and skin into class.</p>
-						<p>Group  special property and append selectors. </p>
-						<p>Avoid descendant and element selectors.</p>
-						<p>Separate selectors for JS and CSS.</p>
-						<p>Three categories of styles is Base, Module and State.</p>
-						<p>In order to write CSS property.</p>
-					</div>
+					<ul class="content-list">
+						<li class="item">
+							<h3 class="item-title">分离皮肤和结构</h3>
+							<small class="item-subtitle">Sparate structure from skin.</small>
+							<p class="item-paragraph">不要将皮肤样式和结构样式放在同一class中，比如一个带icon的button，应该分类2个class，icon和button，一个只有icon的图片，一个只有button的尺寸:<pre>
+.icon { 
+	background-image: url(...);	}
+.button {
+	width: 80px;
+	height: 40px; }
+.button .icon {
+	width: 20px;
+	height: 20px;}
+							</pre></p>
+						</li>
+						<li class="item">
+							<h3 class="item-title">避免依赖元素结构</h3>
+							<small class="item-subtitle">Avoid depend on structure of element.</small>
+							<p class="item-paragraph">不要依赖于元素结构，比如子代选择器，当结构发生变化时，选择器很容易失效：<pre>
+.parent > child {
+	...;
+}
+							</pre></p>
+						</li>
+						<li class="item">
+							<h3 class="item-title">将样式分为3个类型：基础、模块、状态</h3>
+							<small class="item-subtitle">Three categories of styles is Base, Module and State.</small>
+							<p class="item-paragraph"></p>
+						</li>
+						<li class="item">
+							<h3 class="item-title">分组特殊的属性并添加选择器</h3>
+							<small class="item-subtitle">Group special property and append selectors. </small>
+							<p class="item-paragraph"></p>
+						</li>
+
+						<li class="item">
+							<h3 class="item-title"></h3>
+							<small class="item-subtitle"></small>
+							<p class="item-paragraph"></p>
+						</li>
+					</ul>
 				</section>
 			</div>
 		</main>
